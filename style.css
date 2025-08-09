@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Nata Sans", sans-serif;
+    line-height: 1.5em;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+main{
+    background: #f2f2f2;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: black;
+    border-right: 1px solid black;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: width 300ms ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.close {
+    width: 60px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar a, 
+#sidebar #logo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.85em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: rgb(70, 95, 221);
+}
+
+#menu {
+    width: 100%;
+    text-align: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+svg {
+    flex-shrink: 0;
+    fill: white;
+    width: 24px;
+    height: 24px;
+}
+#logo svg{
+    width:50px;
+    height:50px;
+}
+#sidebar.close span {
+    display: none;
+}
+
+#sidebar.close a,
+#sidebar.close #logo {
+    justify-content: center;
+    padding: 1em 0;
+}
+
+#sidebar.close svg {
+    display: inline-block;
+}
+
+#logo {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#active > a {
+    color:rgb(31, 42, 199);
+}
+
+#active > a svg{
+      fill:rgb(31, 42, 199);
+}
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 500px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccccccdc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.button {
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #45a049;
+}
